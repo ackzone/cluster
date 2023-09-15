@@ -18,3 +18,11 @@ resource "aws_route53_record" "ack-zone-SOA" {
     records = ["ns-905.awsdns-49.net. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400"]
     ttl     = "900"
 }
+
+resource "aws_route53_record" "matrix-ack-zone" {
+    zone_id = "Z3QYCI7E2TAT9Q"
+    name    = "ack.zone"
+    type    = "A"
+    records = ["127.0.0.1"]
+    ttl     = "300"
+}
